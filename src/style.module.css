@@ -1,0 +1,134 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #01b0f1;
+}
+
+/* .navbarContainer{
+  position: fixed;
+} */
+
+.sidebarSection{
+   display: flex;
+   font-size: 15px;
+   /* position: fixed; */
+}
+
+.imageIcon{
+  width: 20px;
+  height: 20px;
+}
+
+.logoText{
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-bottom: 5px;
+}
+
+.alam{
+  background-color: #2e2d2d;
+}
+
+.rightbarConatiner{
+  flex-grow: 1;
+  margin-bottom: 10px;
+}
+
+
+.leftbar{
+  background-color: #d9d9d9;
+  margin-right: 2px;
+  padding: 1px;
+  padding-right: 25px;
+  /* position: relative; */
+}
+
+.leftbarParent{
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.leftbarChild{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.leftbarOptions{
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.leftbarOptions a{
+  margin-bottom: 3px;
+  text-decoration: none;
+}
+
+.rightBar{
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  background-color: beige;
+  padding: 10px;
+}
+
+.rightBarLogo{
+  display: flex;
+  gap: 10px;
+  justify-items: center;
+  align-items: center;
+}
+
+.searchSection{
+  display:flex;
+  gap:5px;
+  align-items:center;
+}
+
+.checkboxStyle{
+  display: flex;
+  gap: 3px;
+}
+
+.deleteIcon{
+  cursor: pointer;
+}
+
+/* styling the table section  */
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 3px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  font-size: 10px;
+}
+
+
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  color: #333;
+}
+
+td{
+  background-color: #f9f9f9;
+
+}
+
+th{
+  background-color: #45546c;
+  color: white;
+}
