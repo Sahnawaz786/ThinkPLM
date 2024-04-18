@@ -52,7 +52,7 @@ const PartContainer = ({ children, id }) => {
   const structureHandler = (buttonName) => {
     console.log("buttname2:" + buttonName)
     setSelectedButton(buttonName)
-    navigate('/part-structure/' + id)
+    navigate('/bom-structure/' + id)
     console.log("this is two button")
     console.log(selectedButton)
   }
@@ -60,7 +60,7 @@ const PartContainer = ({ children, id }) => {
   const detailsHandler = (buttonName) => {
     console.log("buttname1:" + buttonName)
     setSelectedButton(buttonName)
-    navigate('/details/' + id)
+    navigate('/part-details/' + id)
     console.log("this is one button")
     console.log(selectedButton)
 
@@ -73,7 +73,7 @@ const PartContainer = ({ children, id }) => {
         {(partInformation || [])?.map((part, index) => {
           return (
             <div className={classes.container} style={{ fontWeight: "bold", fontSize: "20px", textDecoration: "underline", backgroundColor: "#d9d9d9", padding: "2px" }}>
-              <p> <SettingsIcon />Part-{part.data.part_number},{part.data.part_name},{part.data.parts[0].iteration_info}</p>
+              <p className={classes.container_paragraph}> <SettingsIcon />Part-{part.data.part_number},{part.data.part_name},{part.data.parts[0].iteration_info}</p>
             </div>
           )
         })}
@@ -92,9 +92,6 @@ const PartContainer = ({ children, id }) => {
             </div>
 
           </div>
-          {/* <div className={classes.header}>
-          <h2>Part Information:-</h2>
-      </div> */}
 
           {children}
         </div>

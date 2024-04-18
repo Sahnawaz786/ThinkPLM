@@ -16,6 +16,7 @@ function App() {
           <Route path="/create-part" element={<></>} />
           <Route path="/details/:id" element={<></>} />
           <Route path="/part-details/:id" element={<></>} />
+          <Route path="/bom-structure/:id" element={<></>} />
         </Routes>
       </Router>
     </div>

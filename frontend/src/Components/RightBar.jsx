@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import styles from '../style.module.css';
+import Structure from './AllContainer/BomStructure/Structure';
 import PartDetails from './AllContainer/PartsAction/PartDetails';
 import Contract from './Contract';
 import OnBoard from './OnBoard';
@@ -37,6 +38,11 @@ const RightBar = () => {
       if (id) {
         componentToRender = <PartDetails id={id} />;
       }
+      break;
+    case `/bom-structure/${id}`:
+        if (id) {
+          componentToRender = <Structure id={id} />;
+        }
       break;
   }
 
