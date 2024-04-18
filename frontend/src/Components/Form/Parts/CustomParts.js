@@ -140,7 +140,7 @@ const CustomParts = () => {
           }]
     });
       
-     navigate('/submitted');
+     navigate('/part-table');
     }
    
   }

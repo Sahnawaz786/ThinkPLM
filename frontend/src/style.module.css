@@ -35,6 +35,11 @@
 .rightbarConatiner{
   flex-grow: 1;
   margin-bottom: 10px;
+  /* padding: 10px; */
+}
+
+.mainLeftbarContainer{
+  margin-top: 8px;
 }
 
 
@@ -43,6 +48,7 @@
   margin-right: 2px;
   padding: 1px;
   padding-right: 25px;
+  padding-left: 5px;
   /* position: relative; */
 }
 
@@ -98,6 +104,7 @@
 .deleteIcon{
   cursor: pointer;
 }
+
 
 /* styling the table section  */
 

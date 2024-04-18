@@ -152,7 +152,7 @@ return (
             <div className={classes.input}>
             <label>Country*</label>
               <select 
-              style={{margin:"5px", height:"30px", width:"18rem",borderRadius:"5px",borderStyle:"none",fontSize:"11px"}}
+              className={classes.input_select}
               name="country" value={userData.country} onChange={postUserData}>
               <option value="">Select Country</option>
               <option value="Afghanistan">Afghanistan</option>
@@ -405,7 +405,7 @@ return (
             <div className={classes.input}>
             <label>State*</label>
               <select 
-              style={{margin:"5px", height:"30px", width:"18rem",borderRadius:"5px",borderStyle:"none",fontSize:"11px"}}
+              className={classes.input_select}
               name="state" value={userData.state} onChange={postUserData}>
                     <option value="">Select State</option>
                     <option value="Andhra Pradesh">Andhra Pradesh</option>

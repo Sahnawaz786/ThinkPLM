@@ -139,7 +139,7 @@ const StandardParts = () => {
           }]
     });
       
-     navigate('/submitted');
+     navigate('/part-table');
     }
    
   }
