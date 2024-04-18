@@ -10,12 +10,12 @@ import PartTable from './PartTable';
 
 const RightBar = () => {
   let location = useLocation();
-  let id = location.pathname.split("/").slice(-1)[0];
-  console.log({id});
+  let id = location.pathname.split('/').slice(-1)[0];
+  console.log({ id });
 
   console.log(location.pathname);
 
-  let componentToRender = <PartTable/> ;
+  let componentToRender = <PartTable />;
 
   switch (location.pathname) {
     case '/part-table':
@@ -28,23 +28,19 @@ const RightBar = () => {
       componentToRender = <Contract />;
       break;
     case '/create-supplier':
-      componentToRender = <SupplierPage/>;
+      componentToRender = <SupplierPage />;
       break;
     case '/create-part':
-        componentToRender = <PartManagementPage/>;
-        break;
-        case `/part-details/${id}`:
-          if(id){
-          componentToRender = <PartDetails id={id} />;
-          }
-          break;
+      componentToRender = <PartManagementPage />;
+      break;
+    case `/part-details/${id}`:
+      if (id) {
+        componentToRender = <PartDetails id={id} />;
+      }
+      break;
   }
 
-  return (
-    <div className={styles.rightbarConatiner}>
-      {componentToRender}
-    </div>
-  );
+  return <div className={styles.rightbarConatiner}>{componentToRender}</div>;
 };
 
 export default RightBar;

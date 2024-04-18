@@ -91,7 +91,7 @@ const LeftBar = () => {
                     </div>
                     {elem.isVisible ? (
                       <div className={styles.leftbarOptions}>
-                        <Link to={`/details/${elem.id}`}>Details</Link>
+                        <Link to={`/part-details/${elem.id}`}>Details</Link>
                         <Link to={'/onboard-status'}>Onboarding status</Link>
                         <Link to='/contract-details'>View Contract details</Link>
                       </div>
