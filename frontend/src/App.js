@@ -14,7 +14,8 @@ function App() {
           <Route path="/onboard-status" element={<></>} />
           <Route path="/contract-details" element={<></>} />
           <Route path="/create-part" element={<></>} />
-          <Route path="/details" element={<></>} />
+          <Route path="/details/:id" element={<></>} />
+          <Route path="/part-details/:id" element={<></>} />
         </Routes>
       </Router>
     </div>

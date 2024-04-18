@@ -1,11 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
+import PartServices from '../services/parts.services';
 import { UserContext } from '../store/UserProvider';
 import styles from '../style.module.css';
 import DisplayAlert from '../utils/DisplayAlert';
-import PartServices from '../services/parts.services';
-import axios from 'axios';
 
 const PartTable = () => {
   const { getPart, deletePart } = new PartServices();
@@ -56,6 +55,10 @@ const PartTable = () => {
   const handlePartClick = () => {
     navigate('/create-part');
   };
+
+  const handlePartDetails=(id)=>{
+    navigate('/part-details/'+id)
+  }
 
   return (
     <div>
@@ -167,6 +170,9 @@ const PartTable = () => {
                   src='https://cdn-icons-png.freepik.com/256/665/665049.png?semt=ais_hybrid'
                   width={20}
                   height={20}
+                  onClick={() => {
+                    handlePartDetails(elem.id);
+                  }}
                 />
               </td>
             </tr>

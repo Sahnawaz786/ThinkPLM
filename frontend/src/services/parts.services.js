@@ -27,7 +27,7 @@ class PartServices {
 
     async getPartById(id) {
         try {
-            const response = await axios.get(`${baseURL}/SupplierMasterObject/${id}`);
+            const response = await axios.get(`${baseURL}/SupplierMasterObject1/${id}`);
             if (response.status!==200) {
                 throw new Error(`Failed to fetch parts: ${response.statusText}`);
             }

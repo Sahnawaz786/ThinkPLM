@@ -1,15 +1,17 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import styles from '../style.module.css';
+import PartDetails from './AllContainer/PartsAction/PartDetails';
 import Contract from './Contract';
-import PartTable from './PartTable';
 import OnBoard from './OnBoard';
 import PartManagementPage from './Pages/PartManagementPage';
 import SupplierPage from './Pages/SupplierPage';
-import Details from './Details';
+import PartTable from './PartTable';
 
 const RightBar = () => {
   let location = useLocation();
+  let id = location.pathname.split("/").slice(-1)[0];
+  console.log({id});
 
   console.log(location.pathname);
 
@@ -31,8 +33,10 @@ const RightBar = () => {
     case '/create-part':
         componentToRender = <PartManagementPage/>;
         break;
-        case '/details/:id':
-          componentToRender = <Details/>;
+        case `/part-details/${id}`:
+          if(id){
+          componentToRender = <PartDetails id={id} />;
+          }
           break;
   }
 
