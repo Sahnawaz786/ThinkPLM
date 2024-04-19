@@ -44,7 +44,11 @@ const PartTable = () => {
 
   const handleAPI = async () => {
     const response = await getPart();
-    setData(response.data);
+
+    const newPartsData = response?.data.map(elem => {
+      return { ...elem, parts: [elem?.parts?.sort((a, b) => b.id - a.id)?.[0]] }
+    })
+    setData(newPartsData);
     console.log('Parts', response.data);
   };
 

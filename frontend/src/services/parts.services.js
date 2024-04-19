@@ -38,6 +38,20 @@ class PartServices {
         }
     }
 
+    
+    async getPartHistoryById(id) {
+        try {
+            const response = await axios.get(`${baseURL}/SupplierMasterObject/${id}`);
+            if (response.status!==200) {
+                throw new Error(`Failed to fetch parts: ${response.statusText}`);
+            }
+            return await response;
+        } catch (error) {
+            console.error('Error fetching parts:', error);
+            return null;
+        }
+    }
+
     async deletePart(id) {
         try {
             const response = await axios.delete(`${baseURL}/SupplierMasterObject/${id}`);
